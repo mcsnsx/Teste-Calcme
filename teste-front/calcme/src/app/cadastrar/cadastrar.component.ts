@@ -22,16 +22,23 @@ export class CadastrarComponent implements OnInit {
   }
 
   enviar(){
-    if(this.postagem.nome || this.postagem.email || this.postagem.telefone == null ){
-      alert('Todos os campos são obrigatórios!')
+    if(this.postagem.nome == null ){
+      alert('O campo "Nome" é obrigatório!')
+    }
+    if(this.postagem.email == null ){
+      alert('O campo "Email" é obrigatório!')
+    }
+    if(this.postagem.telefone == null ){
+      alert('O campo "Telefone" é obrigatório!')
     } else {
+      alert('Informações enviadas com sucesso!')
       this.authService.cadastrar(this.postagem).subscribe((resp: Postagem) =>{
         this.postagem = resp
         this.router.navigate(['/cadastrar'])
-        alert('Informações enviadas com sucesso!')
+        
       })
     }
   }
+  
 
 }
-//origin

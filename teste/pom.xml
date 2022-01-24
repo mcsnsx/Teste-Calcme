@@ -13,6 +13,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>teste</name>
 	<description>Teste Calcme</description>
+	
+	<packaging>war</packaging>
+	
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -64,6 +67,9 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		
+		<finalName>TesteCalcme</finalName>
+		
 	</build>
 
 </project>
